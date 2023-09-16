@@ -105,7 +105,6 @@ const hotels = [
             "Five minutes away from airport "
         ]
     },
-    
     {
         id: 9,
         name: "Hari Niwas Palace",
