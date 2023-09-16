@@ -71,8 +71,6 @@ Licensed under the [MIT License](LICENSE)
 
 
 
-
-
 <!-- # Getting Started with Create React App
 
 This project is using tailwind css with [Create React App](https://github.com/facebook/create-react-app).
