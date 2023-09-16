@@ -1,4 +1,79 @@
-# Getting Started with Create React App
+# Hotel Booking App
+
+A Web Application for searching and booking hotels based on their reviews.
+
+---
+
+<p align="center">
+<img src="src/assets/images/login.png">
+</p>
+
+
+<p align="center">
+<img src="src/assets/images/home.png">
+</p>
+
+
+<p align="center">
+<img src="src/assets/images/review.png">
+</p>
+
+
+<p align="center">
+<img src="src/assets/images/search.png">
+</p>
+
+---
+
+## Features:
+
+- Authentication using `Google Firebase`.
+- `Home Page` with Hotels Details.
+- Details contain `Name` `Images` `City` `Star` `Rating` and `Reviews`.
+- Auto Sliding `Hotel Images` on hover with `Book Now` button
+- `Search Bar` for finding a particular hotel.
+- Shows complete details along with review comments in a `Expanded Card` on clicking.
+- `In-App Notification` on confirm booking.
+- `Logout`
+
+---
+
+## Technologies used:
+
+- React js
+- Firebase
+- Tailwind CSS
+- PostCSS
+- Vite
+
+---
+
+## Contributors
+
+- Balaji
+
+---
+
+## License & Copyright
+
+Copyright [©balaji](https://github.com/balajirai)
+
+Licensed under the [MIT License](LICENSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +142,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
