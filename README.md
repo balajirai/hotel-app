@@ -29,6 +29,7 @@ A Web Application for searching and booking hotels based on their reviews.
 
 - Authentication using `Google Firebase`.
 - `Home Page` with Hotels Details.
+- `Glassmorphism` in Navbar.
 - Details contain `Name` `Images` `City` `Star` `Rating` and `Reviews`.
 - Auto Sliding `Hotel Images` on hover with `Book Now` button
 - `Search Bar` for finding a particular hotel.
