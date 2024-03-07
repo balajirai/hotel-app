@@ -38,7 +38,7 @@ function Navbar({handleSearch}) {
     };
 
     return (
-        <nav className="bg-slate-900 backdrop-filter bg-opacity-30 border-b border-gray-800 backdrop-blur-lg p-4 w-full m-0 fixed top-0 z-10">
+        <nav className="bg-slate-900 backdrop-filter bg-opacity-30 border-b border-gray-800 backdrop-blur-lg p-3 w-full m-0 fixed top-0 z-10">
             <div className="container mx-auto flex justify-between items-center flex-wrap">
                 <Link
                     to="/"
@@ -55,16 +55,15 @@ function Navbar({handleSearch}) {
                 </Link>
                 <ul className="flex space-x-4 px-auto ml-auto">
                     <li className="">
-                        <SearchBar onSearch={handleSearch} />
+                        {/* search bar appears only when user is logged in */}
+                        { user && <SearchBar onSearch={handleSearch} />}
                     </li>
                 </ul>
 
                 <ul className="flex space-x-4 px-4">
                     <li>
                         <button className="flex justify-between items-center relative">
-                            {user ? (
-                                <Logout onLogout={handleLogout} />
-                            ) : null}
+                            {user && <Logout onLogout={handleLogout} /> }
                         </button>
                     </li>
                 </ul>

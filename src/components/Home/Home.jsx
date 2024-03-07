@@ -1,34 +1,33 @@
-// src/components/Home/Home.jsx
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom'; // Import Link from React Router
 import { auth } from '../../Firebase';
-import Login from '../Auth/Login'; // Import the Login component
-import Logout from '../Auth/Logout'; // Import the Logout component
+import toast from 'react-hot-toast';
+import Login from '../Auth/Login';
 import HotelCard from '../Cards/HotelCard';
-import SearchBar from '../Navbar/SearchBar';
-import Notification from './Notification';
 import Navbar from '../Navbar/Navbar';
 import hotels from '../../api/Hotels';
 import Footer from './Footer';
 import ExpandedHotelCard from '../Cards/ExpandedHotelCard';
 
 function Home() {
-    // State variables for hotels, search text, selected hotel, and notification
-    // const [hotels, setHotels] = useState([]);
     const [selectedHotel, setSelectedHotel] = useState(null);
-    const [showNotification, setShowNotification] = useState(false);
 
-    // search bar
-
+    // search bar starts here---------------------------------------------------------
     const [searchQuery, setSearchQuery] = useState('');
     const [Hotels, setHotels] = useState(hotels);
+
     const filteredCards = Hotels.filter((hotel) =>
-        hotel.name.toLowerCase().includes(searchQuery.toLowerCase())
+        hotel.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        hotel.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        hotel.rating.includes(searchQuery) ||
+        hotel.star.toString() === searchQuery
     );
 
     const handleSearch = (query) => {
         setSearchQuery(query);
     };
+
+    // search bar ends here---------------------------------------------------------
+
 
 
     const [user, setUser] = useState(null); // Track user authentication status
@@ -55,18 +54,18 @@ function Home() {
     return (
         <div className='min-h-screen'>
             <div className='w-full flex flex-wrap'>
-                <Navbar handleSearch={handleSearch}/>
+                <Navbar handleSearch={handleSearch} />
             </div>
             <div className="mt-20 min-h-screen">
                 {user ? (
                     <div className=''>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-inherit p-5">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 bg-inherit p-5">
                             {filteredCards.map((hotel) => (
                                 <HotelCard
                                     key={hotel.id}
                                     hotel={hotel}
                                     onCardClick={() => setSelectedHotel(hotel)}
-                                    onBookNowClick={() => setShowNotification(true)}
+                                    onBookNowClick={() => toast.success('Booking has been confirmed')}
                                 />
                             ))}
                         </div>
@@ -83,12 +82,12 @@ function Home() {
                         <Login />
                     </div>
                 )}
-                {showNotification && (
+                {/* {showNotification && (
                     <Notification
                         message="Your booking has been confirmed"
                         onClose={() => setShowNotification(false)}
                     />
-                )}
+                )} */}
 
             </div>
             <Footer />

@@ -4,14 +4,14 @@ import { motion } from "framer-motion"
 import { Tilt } from 'react-tilt';
 import { FaStar } from "react-icons/fa";
 import { fadeIn } from "../../utils/Motion"
-import ExpandedHotelCard from './ExpandedHotelCard';
+// import ExpandedHotelCard from './ExpandedHotelCard';
 
 function HotelCard({ hotel, onCardClick, onBookNowClick }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  // const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleExpand = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
 
   // Moving images on hover
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

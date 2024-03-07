@@ -17,7 +17,7 @@ function SearchBar({ data, onSearch }) {
       <input
         type="text"
         placeholder="Search for hotels..."
-        className="ml-auto w-full px-3 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-200"
+        className="ml-auto w-full px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:border-0"
         value={query}
         onChange={handleInputChange}
       />

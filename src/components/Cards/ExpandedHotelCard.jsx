@@ -5,7 +5,8 @@ const ExpandedHotelCard = ({ hotel, onClose }) => {
     return (
         <div
             className="fixed top-10 left-0 w-full h-full flex items-center justify-center inset-0 backdrop-blur-md backdrop-filter">
-            <div className="bg-black-100 rounded-2xl p-8 w-1/2 z-50 border top-30 backdrop-blur-lg backdrop-filter">
+            {/* <div className="bg-black-100 rounded-2xl p-8 w-1/2 z-50 border top-30 backdrop-blur-lg backdrop-filter"> */}
+            <div className="bg-slate-900 rounded-2xl p-8 w-1/2 z-50 border">
                 <div className="relative flex">
                     <img
                         className="w-40 h-50 object-cover rounded-2xl"
