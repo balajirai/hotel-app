@@ -53,9 +53,10 @@ function Navbar({handleSearch}) {
                         My Hotel
                     </p>
                 </Link>
+
+                {/* when user is logged in */}
                 <ul className="flex space-x-4 px-auto ml-auto">
                     <li className="">
-                        {/* search bar appears only when user is logged in */}
                         { user && <SearchBar onSearch={handleSearch} />}
                     </li>
                 </ul>
@@ -67,7 +68,7 @@ function Navbar({handleSearch}) {
                         </button>
                     </li>
                 </ul>
-
+                
             </div>
         </nav>
     );

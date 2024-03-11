@@ -82,13 +82,6 @@ function Home() {
                         <Login />
                     </div>
                 )}
-                {/* {showNotification && (
-                    <Notification
-                        message="Your booking has been confirmed"
-                        onClose={() => setShowNotification(false)}
-                    />
-                )} */}
-
             </div>
             <Footer />
         </div>
