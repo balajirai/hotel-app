@@ -58,8 +58,8 @@ function Home() {
             </div>
             <div className="mt-20 min-h-screen">
                 {user ? (
-                    <div className=''>
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 bg-inherit p-5">
+                    <div className='flex justify-around'>
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 bg-inherit p-5">
                             {filteredCards.map((hotel) => (
                                 <HotelCard
                                     key={hotel.id}
