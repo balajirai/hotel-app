@@ -203,7 +203,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    /* background: #fff; */
     background: #5d5d5d;
     border-radius: 1in;
     cursor: pointer;

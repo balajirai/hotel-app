@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { hotel } from "../../assets";
 import SearchBar from './SearchBar';
 
-function Navbar({handleSearch}) {
+function Navbar({ handleSearch }) {
 
     const [user, setUser] = useState(null); // Track user authentication status
 
@@ -39,7 +39,7 @@ function Navbar({handleSearch}) {
 
     return (
         <nav className="bg-slate-900 backdrop-filter bg-opacity-30 border-b border-gray-800 backdrop-blur-lg p-3 w-full m-0 fixed top-0 z-10">
-            <div className="container mx-auto flex justify-between items-center flex-wrap">
+            <div className="px-10 mx-auto flex justify-between items-center flex-wrap">
                 <Link
                     to="/"
                     className="flex items-center gap-2"
@@ -55,20 +55,19 @@ function Navbar({handleSearch}) {
                 </Link>
 
                 {/* when user is logged in */}
-                <ul className="flex space-x-4 px-auto ml-auto">
-                    <li className="">
-                        { user && <SearchBar onSearch={handleSearch} />}
-                    </li>
-                </ul>
+                <div className="flex justify-end">
+                    <ul className="flex space-x-4 px-auto ml-auto">
+                        <li className="">
+                            {user && <SearchBar onSearch={handleSearch} />}
+                        </li>
+                        <li>
+                            <button className="flex items-center relative">
+                                {user && <Logout onLogout={handleLogout} />}
+                            </button>
+                        </li>
+                    </ul>
+                </div>
 
-                <ul className="flex space-x-4 px-4">
-                    <li>
-                        <button className="flex justify-between items-center relative">
-                            {user && <Logout onLogout={handleLogout} /> }
-                        </button>
-                    </li>
-                </ul>
-                
             </div>
         </nav>
     );
